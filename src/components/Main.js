@@ -1,7 +1,12 @@
 import React from "react";
+import {MainStyle} from './Styled';
 
-const Main = () => {
-  return <div>Main</div>;
+const Main = (props) => {
+  return (
+    <MainStyle>
+      {props.children}
+    </MainStyle>
+  );
 };
 
 export default Main;

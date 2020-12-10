@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import Search from "../components/Search";
+import Card from "../components/Card";
 import { categories, datas } from "../data/categories";
 import "../styles/style.css";
+import { GlobalContext } from "../context";
 
 import flagPol from "../flags/pol.png";
 import flagEng from "../flags/eng.png";
@@ -13,7 +15,9 @@ import flagSpa from "../flags/spa.png";
 import flagFra from "../flags/fra.png";
 import flagIta from "../flags/ita.png";
 
+
 const WordsCard = props => {
+
   console.log(props);
   console.log("cat", props.match.params.cat);
 
@@ -58,10 +62,9 @@ const WordsCard = props => {
   console.log("wordsArray after map", wordsArr);
 
   return (
-    <main className="main">
+    <>
       <Search />
-
-      <div className="word__card">
+      <Card>
         <ul
           className="main__lang-desc"
           // style={{ flexDirection: "column", flexWrap: "wrap" }}
@@ -115,8 +118,8 @@ const WordsCard = props => {
             )}
           </button>
         </div>
-      </div>
-    </main>
+        </Card>
+    </>
   );
 };
 

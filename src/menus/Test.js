@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, withRouter } from "react-router-dom";
+import Card from "../components/Card";
 
 import Search from "../components/Search";
 import { categories, datas } from "../data/categories";
@@ -91,14 +92,14 @@ const Test = props => {
     </button>
   ));
   return (
-    <main className="main">
+    <>
       <Search />
-
-      <div className="word__card">
-        <span className="word__card-title">Choose Level: {chooseLevel}</span>
+      <Card>
+      <span className="word__card-title">Choose Level: {chooseLevel}</span>
         <ul className="main__lang-desc">{showCat}</ul>
-      </div>
-    </main>
+      </Card>
+
+    </>
   );
 };
 

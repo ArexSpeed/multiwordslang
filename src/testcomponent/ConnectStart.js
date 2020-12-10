@@ -102,11 +102,11 @@ const ConnectStart = props => {
 
   const showLangs = langs.map(lang => <span> {lang} </span>);
   return (
-    <main className="main">
+    <>
       <Search />
 
       <div className="playground">{showWord}</div>
-    </main>
+    </>
   );
 };
 

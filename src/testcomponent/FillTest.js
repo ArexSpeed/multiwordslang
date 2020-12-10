@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Search from "../components/Search";
+import Card from '../components/Card';
 import { categories, datas } from "../data/categories";
 import "../styles/style.css";
 import WordCard from "../menus/WordsCard";
@@ -199,10 +200,10 @@ const FillTest = props => {
   });
 
   return (
-    <main className="main">
+    <>
       <Search />
 
-      <div className="word__card">
+      <Card>
         <ul
           className="main__lang-desc"
           // style={{ flexDirection: "column", flexWrap: "wrap" }}
@@ -410,8 +411,8 @@ const FillTest = props => {
             )}
           </button>
         </div>
-      </div>
-    </main>
+        </Card>
+    </>
   );
 };
 

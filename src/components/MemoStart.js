@@ -150,11 +150,11 @@ const MemoStart = props => {
   ));
 
   return (
-    <main className="main">
+    <>
       <Search />
 
       <div className="memo__cards">{showCards}</div>
-    </main>
+    </>
   );
 };
 

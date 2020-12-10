@@ -9,15 +9,16 @@ import flagNed from "../flags/ned.png";
 import flagSpa from "../flags/spa.png";
 import flagFra from "../flags/fra.png";
 import flagIta from "../flags/ita.png";
+import Card from "../components/Card";
 
 const Home = () => {
   return (
-    <main className="main">
+    <>
       <Search />
       <div className="main__logo">
         MULTI<span className="span">WORDS</span>
       </div>
-      <div className="main__word__card">
+      <Card>
         <ul className="main__lang-desc">
           <li className="lang-color-pol">
             {" "}
@@ -55,8 +56,8 @@ const Home = () => {
             Impara italiano
           </li>
         </ul>
-      </div>
-    </main>
+        </Card>
+    </>
   );
 };
 

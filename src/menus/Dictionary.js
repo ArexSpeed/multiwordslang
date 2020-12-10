@@ -18,7 +18,7 @@ const Dictionary = () => {
   ));
 
   return (
-    <main className="main">
+    <>
       <Search />
       <div className="dico__table">
         <table className="dico__table-table">
@@ -34,7 +34,7 @@ const Dictionary = () => {
           {dico}
         </table>
       </div>
-    </main>
+    </>
   );
 };
 

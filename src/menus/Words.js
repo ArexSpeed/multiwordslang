@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Search from "../components/Search";
+import  Card  from "../components/Card";
 import { categories, datas } from "../data/categories";
 import "../styles/style.css";
 
@@ -27,14 +28,14 @@ const Words = props => {
   });
 
   return (
-    <main className="main">
+    <>
       <Search />
-
-      <div className="word__card">
-        <span className="word__card-title">Choose category: </span>
+    <Card>
+    <span className="word__card-title">Choose category: </span>
         <ul className="main__lang-desc">{category}</ul>
-      </div>
-    </main>
+    </Card>
+
+    </>
   );
 };
 

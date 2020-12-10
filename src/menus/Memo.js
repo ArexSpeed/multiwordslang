@@ -5,6 +5,7 @@ import Search from "../components/Search";
 import MemoStart from "../components/MemoStart";
 import { categories, datas } from "../data/categories";
 import "../styles/style.css";
+import Card from "../components/Card";
 
 const Memo = props => {
   const [categorie, setCategorie] = useState([]);
@@ -110,18 +111,17 @@ const Memo = props => {
   };
 
   return (
-    <main className="main">
+    <>
       <Search />
-
-      <div className="word__card">
-        <span className="word__card-title">Choose category: </span>
+      <Card>
+      <span className="word__card-title">Choose category: </span>
         <ul className="main__lang-desc">{show}</ul>
 
         <button className="button next" onClick={propsToMemoStart}>
           <span>Start</span>
         </button>
-      </div>
-    </main>
+      </Card>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { datas } from "../data/categories";
 import "../styles/style.css";
+import Colors from "./Colors";
 
 const Search = () => {
   const [searchResult, setSearchResult] = useState([]);
@@ -68,10 +69,13 @@ const Search = () => {
 
   console.log("showArr", showArr);
 
+  const changeColor = () => console.log('change')
+
   return (
     <>
       <div className="main__header">
-        <div className="main__header-circle"></div>
+       
+        <Colors />
         <input
           type="text"
           className="search"
@@ -81,7 +85,11 @@ const Search = () => {
         <div className={showArr.length ? "header__table" : ""}>
           <table>{showResult}</table>
         </div>
+ 
+        
+     
       </div>
+      
     </>
   );
 };

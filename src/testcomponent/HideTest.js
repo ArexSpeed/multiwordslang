@@ -13,6 +13,7 @@ import flagNed from "../flags/ned.png";
 import flagSpa from "../flags/spa.png";
 import flagFra from "../flags/fra.png";
 import flagIta from "../flags/ita.png";
+import Card from "../components/Card";
 
 const HideTest = props => {
   const [openWord, setOpenWord] = useState({
@@ -83,10 +84,10 @@ const HideTest = props => {
   };
 
   return (
-    <main className="main">
+    <>
       <Search />
 
-      <div className="word__card">
+      <Card>
         <ul
           className="main__lang-desc"
           // style={{ flexDirection: "column", flexWrap: "wrap" }}
@@ -217,8 +218,8 @@ const HideTest = props => {
             )}
           </button>
         </div>
-      </div>
-    </main>
+        </Card>
+    </>
   );
 };
 
